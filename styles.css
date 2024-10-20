@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h1 {
+    color: #c0392b;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.flower {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Red_flower.jpg/640px-Red_flower.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin: 20px auto;
+    opacity: 0; /* Start hidden */
+    animation: bloom 2s forwards; /* Animation */
+}
+
+#flower1 {
+    animation-delay: 0s;
+}
+
+#flower2 {
+    animation-delay: 0.5s; /* Staggered animation */
+}
+
+#flower3 {
+    animation-delay: 1s; /* Staggered animation */
+}
+
+@keyframes bloom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.yes {
+    background-color: #e74c3c;
+}
+
+.yes:hover {
+    background-color: #c0392b;
+}
+
+.no {
+    background-color: #3498db;
+}
+
+.no:hover {
+    background-color: #2980b9;
+}
